@@ -1,2 +1,171 @@
-<h2>About Me</h2>
-<p>Hi, I'm John Doe. I'm a web developer based in New York.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Features - Git and GitHub Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #24292e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #0366d6;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        .card h2 {
+            color: #24292e;
+            margin-top: 0;
+        }
+        .card p, .card ul {
+            line-height: 1.6;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GitHub Features</h1>
+        <p>Powerful collaboration and project management tools</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="1.html">Git Basics</a>
+        <a href="2.html">GitHub Features</a>
+        <a href="3.html">Advanced Git</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>What is GitHub?</h2>
+            <p>GitHub is a web-based platform that uses Git for version control and adds collaboration features. It provides a graphical interface for managing Git repositories and offers tools for code review, project management, and team collaboration.</p>
+        </div>
+        <div class="feature-grid">
+            <div class="card">
+                <h2>Repositories</h2>
+                <p>Host your Git repositories on GitHub with features like issue tracking, wikis, and release management. Public repositories are free, while private repositories offer enhanced security.</p>
+            </div>
+            <div class="card">
+                <h2>Pull Requests</h2>
+                <p>Propose changes to a repository and discuss them with collaborators. Pull requests enable code review, automated testing, and merge conflict resolution.</p>
+            </div>
+            <div class="card">
+                <h2>Issues</h2>
+                <p>Track bugs, feature requests, and tasks. Use labels, assignees, and milestones to organize and prioritize work effectively.</p>
+            </div>
+            <div class="card">
+                <h2>GitHub Actions</h2>
+                <p>Automate your workflow with CI/CD pipelines. Build, test, and deploy your code automatically when you push changes.</p>
+            </div>
+            <div class="card">
+                <h2>GitHub Pages</h2>
+                <p>Host static websites directly from your GitHub repositories. Perfect for project documentation, portfolios, and simple web applications.</p>
+            </div>
+            <div class="card">
+                <h2>Organizations</h2>
+                <p>Manage multiple repositories and users under one organization. Control access, set up teams, and maintain coding standards across projects.</p>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Collaboration Tools</h2>
+            <p>GitHub provides various tools to enhance collaboration, including code review comments, project boards, and integration with popular development tools and services.</p>
+        </div>
+        <div class="card">
+            <h2>Connecting Git to GitHub</h2>
+            <p>To connect your local Git repository to GitHub, you need to add a remote origin. This allows you to push your local commits to GitHub and pull changes from collaborators.</p>
+        </div>
+        <div class="card">
+            <h2>Authentication Methods</h2>
+            <ul>
+                <li><strong>Personal Access Tokens:</strong> Recommended for command line and VS Code</li>
+                <li><strong>SSH Keys:</strong> More secure for frequent operations</li>
+                <li><strong>GitHub CLI:</strong> Authenticate through command line interface</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Setting Up Remote Origin</h2>
+            <div class="code">
+# Add GitHub repository as remote origin<br>
+git remote add origin https://github.com/username/repo-name.git<br><br>
+# Verify remote<br>
+git remote -v<br><br>
+# Push local commits to GitHub<br>
+git push -u origin main
+            </div>
+        </div>
+        <div class="card">
+            <h2>VS Code GitHub Integration</h2>
+            <p>VS Code has built-in GitHub integration. Sign in to GitHub from VS Code to enable features like:</p>
+            <ul>
+                <li>Publishing repositories directly to GitHub</li>
+                <li>Creating pull requests from VS Code</li>
+                <li>Managing issues and comments</li>
+                <li>Collaborating with team members</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Publishing to GitHub from VS Code</h2>
+            <ol>
+                <li>Open Source Control panel</li>
+                <li>Click "Publish to GitHub"</li>
+                <li>Choose public or private repository</li>
+                <li>Sign in to GitHub if prompted</li>
+                <li>Repository is created and pushed automatically</li>
+            </ol>
+        </div>
+        <div class="card">
+            <div class="highlight">
+                <h3>🔐 Security Best Practice</h3>
+                <p>Always use Personal Access Tokens instead of passwords for GitHub authentication. Generate tokens from GitHub Settings > Developer settings > Personal access tokens.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
