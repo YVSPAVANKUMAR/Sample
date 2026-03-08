@@ -3,163 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Basics - Git and GitHub Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #24292e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #fff;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #0366d6;
-            font-weight: 500;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin: 20px 0;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-        }
-        .card h2 {
-            color: #24292e;
-            margin-top: 0;
-        }
-        .card p, .card ul {
-            line-height: 1.6;
-        }
-        .code {
-            background-color: #f6f8fa;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-            padding: 16px;
-            font-family: 'Courier New', monospace;
-            overflow-x: auto;
-            margin: 10px 0;
-        }
-        .highlight {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-    </style>
+    <title>Setup & Basics - React Developer Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Git Basics</h1>
-        <p>Fundamental concepts and commands</p>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="1.html">Git Basics</a>
-        <a href="2.html">GitHub Features</a>
-        <a href="3.html">Advanced Git</a>
+    <nav class="main-nav animate-slide-down">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="1.html" class="nav-link active">Setup & Basics</a>
+            <a href="2.html" class="nav-link">Components</a>
+            <a href="3.html" class="nav-link">Advanced Topics</a>
+        </div>
     </nav>
-    <div class="container">
-        <div class="card">
-            <h2>What is Git?</h2>
-            <p>Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. It tracks changes in files and coordinates work among multiple people.</p>
-        </div>
-        <div class="card">
-            <h2>Basic Git Commands</h2>
-            <ul>
-                <li><strong>git init:</strong> Initialize a new Git repository</li>
-                <li><strong>git add:</strong> Add files to the staging area</li>
-                <li><strong>git commit:</strong> Record changes to the repository</li>
-                <li><strong>git status:</strong> Check the status of your repository</li>
-                <li><strong>git log:</strong> View commit history</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Example Workflow</h2>
-            <div class="code">
-git init<br>
-git add README.md<br>
-git commit -m "Initial commit"<br>
-git status<br>
-git log --oneline
+
+    <main class="main-content">
+        <section class="hero-section page-hero">
+            <div class="hero-content">
+                <h1 class="animate-fade-in">⚙️ Setup & Basics</h1>
+                <p class="animate-slide-up">Get your React development environment ready</p>
             </div>
-        </div>
-        <div class="card">
-            <h2>Key Concepts</h2>
-            <p>Understanding repositories, commits, branches, and merges is crucial for effective version control. A repository contains all of your project's files and each file's revision history.</p>
-        </div>
-        <div class="card">
-            <h2>Git Integration in Visual Studio Code</h2>
-            <p>VS Code provides excellent Git integration out of the box. The Source Control panel allows you to perform all Git operations without leaving your editor.</p>
-        </div>
-        <div class="card">
-            <h2>Committing Changes in VS Code</h2>
-            <ul>
-                <li>Click the Source Control icon in the Activity Bar</li>
-                <li>Stage files by clicking the + icon next to changed files</li>
-                <li>Enter a commit message in the text box</li>
-                <li>Click the checkmark icon to commit</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Pushing and Pulling in VS Code</h2>
-            <div class="code">
-# To push changes:<br>
-# Click the "..." menu in Source Control panel<br>
-# Select "Push"<br><br>
-# To pull changes:<br>
-# Click the "..." menu in Source Control panel<br>
-# Select "Pull"
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="step-card animate-scale-in" style="border-left: 4px solid #61dafb;">
+                    <div class="step-header" style="background: var(--gradient-1);">
+                        <span class="step-number">1</span>
+                        <h2>Prerequisites Check</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>Before diving into React, let's ensure your development environment is properly set up. React requires Node.js and npm (Node Package Manager).</p>
+
+                        <h3>Step 1.1: Check if Node.js is installed</h3>
+                        <div class="code-block">
+                            <h4>Open your terminal and run:</h4>
+                            <pre><code>node --version</code></pre>
+                        </div>
+                        <p>If you see a version number (like v18.17.0), Node.js is installed. If not, proceed to the next step.</p>
+
+                        <h3>Step 1.2: Download and Install Node.js</h3>
+                        <div class="installation-guide">
+                            <div class="install-step">
+                                <span class="step-icon">🌐</span>
+                                <div>
+                                    <strong>Visit the official website:</strong>
+                                    <a href="https://nodejs.org" target="_blank">https://nodejs.org</a>
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <span class="step-icon">📦</span>
+                                <div>
+                                    <strong>Download the LTS version</strong> (recommended for most users)
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <span class="step-icon">⚙️</span>
+                                <div>
+                                    <strong>Run the installer</strong> and follow the setup wizard
+                                </div>
+                            </div>
+                            <div class="install-step">
+                                <span class="step-icon">✅</span>
+                                <div>
+                                    <strong>Verify installation:</strong>
+                                    <code>node --version && npm --version</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box" style="background: var(--gradient-1);">
+                            <h4>💡 Why Node.js?</h4>
+                            <p>Node.js allows you to run JavaScript outside of the browser. React applications are built using Node.js tools and npm packages.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in delay-1" style="border-left: 4px solid #ff6b6b;">
+                    <div class="step-header" style="background: var(--gradient-2);">
+                        <span class="step-number">2</span>
+                        <h2>Choose Your Code Editor</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>A good code editor is essential for React development. We recommend Visual Studio Code (VS Code) for its excellent React support.</p>
+
+                        <div class="editor-comparison">
+                            <div class="editor-option recommended">
+                                <div class="editor-header">
+                                    <span class="editor-icon">💙</span>
+                                    <h4>Visual Studio Code (Recommended)</h4>
+                                    <span class="badge">Best Choice</span>
+                                </div>
+                                <ul>
+                                    <li>Free and open-source</li>
+                                    <li>Excellent React/JSX support</li>
+                                    <li>Built-in terminal</li>
+                                    <li>Thousands of extensions</li>
+                                    <li>IntelliSense for JavaScript</li>
+                                </ul>
+                                <a href="https://code.visualstudio.com" class="download-btn" target="_blank">Download VS Code</a>
+                            </div>
+
+                            <div class="editor-option">
+                                <div class="editor-header">
+                                    <span class="editor-icon">🌟</span>
+                                    <h4>Other Popular Options</h4>
+                                </div>
+                                <ul>
+                                    <li>WebStorm (Paid, feature-rich)</li>
+                                    <li>Atom (Free, customizable)</li>
+                                    <li>Sublime Text (Fast, lightweight)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3>Step 2.1: Install Essential VS Code Extensions</h3>
+                        <div class="extensions-list">
+                            <div class="extension-item">
+                                <span class="ext-icon">⚛️</span>
+                                <div>
+                                    <strong>ES7+ React/Redux/React-Native snippets</strong>
+                                    <p>Code snippets for React development</p>
+                                </div>
+                            </div>
+                            <div class="extension-item">
+                                <span class="ext-icon">🎨</span>
+                                <div>
+                                    <strong>Prettier - Code formatter</strong>
+                                    <p>Automatic code formatting</p>
+                                </div>
+                            </div>
+                            <div class="extension-item">
+                                <span class="ext-icon">🐛</span>
+                                <div>
+                                    <strong>ESLint</strong>
+                                    <p>JavaScript linting and error detection</p>
+                                </div>
+                            </div>
+                            <div class="extension-item">
+                                <span class="ext-icon">🌈</span>
+                                <div>
+                                    <strong>Auto Rename Tag</strong>
+                                    <p>Automatically rename paired HTML/JSX tags</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in delay-2" style="border-left: 4px solid #51cf66;">
+                    <div class="step-header" style="background: var(--gradient-4);">
+                        <span class="step-number">3</span>
+                        <h2>Create Your First React Application</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>Now let's create your first React application using Create React App, the official React build tool.</p>
+
+                        <h3>Step 3.1: Open Terminal/Command Prompt</h3>
+                        <ul>
+                            <li><strong>Windows:</strong> Press Win + R, type "cmd", press Enter</li>
+                            <li><strong>macOS:</strong> Press Cmd + Space, type "Terminal", press Enter</li>
+                            <li><strong>Linux:</strong> Press Ctrl + Alt + T</li>
+                        </ul>
+
+                        <h3>Step 3.2: Navigate to Your Projects Folder</h3>
+                        <div class="code-block">
+                            <h4>Create a projects directory (if you don't have one):</h4>
+                            <pre><code>mkdir react-projects
+cd react-projects</code></pre>
+                        </div>
+
+                        <h3>Step 3.3: Create React App</h3>
+                        <div class="code-block">
+                            <h4>Run the create-react-app command:</h4>
+                            <pre><code>npx create-react-app my-first-react-app</code></pre>
+                        </div>
+                        <p>This command will:</p>
+                        <ul>
+                            <li>Create a new folder called "my-first-react-app"</li>
+                            <li>Download all necessary dependencies</li>
+                            <li>Set up the project structure</li>
+                            <li>Configure build tools</li>
+                        </ul>
+
+                        <h3>Step 3.4: Navigate into Your Project</h3>
+                        <div class="code-block">
+                            <h4>Change directory to your new project:</h4>
+                            <pre><code>cd my-first-react-app</code></pre>
+                        </div>
+
+                        <h3>Step 3.5: Start the Development Server</h3>
+                        <div class="code-block">
+                            <h4>Launch your React app:</h4>
+                            <pre><code>npm start</code></pre>
+                        </div>
+                        <p>This will start the development server and open your app in the browser at <code>http://localhost:3000</code></p>
+
+                        <div class="success-box" style="background: var(--gradient-4);">
+                            <h4>🎉 Congratulations!</h4>
+                            <p>You've successfully created and started your first React application! You should see the default React welcome page in your browser.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in" style="border-left: 4px solid #ffd43b;">
+                    <div class="step-header" style="background: var(--gradient-5);">
+                        <span class="step-number">4</span>
+                        <h2>Understanding Project Structure</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>Let's explore the files and folders that Create React App generated for you.</p>
+
+                        <div class="project-structure">
+                            <div class="structure-item root">
+                                <span class="folder-icon">📁</span>
+                                <strong>my-first-react-app/</strong>
+                                <p>Root project directory</p>
+                            </div>
+
+                            <div class="structure-item">
+                                <span class="folder-icon">📁</span>
+                                <strong>src/</strong>
+                                <p>Source code directory (where you'll write your React code)</p>
+                                <div class="sub-files">
+                                    <div class="file-item">
+                                        <span class="file-icon">⚛️</span>
+                                        <code>App.js</code> - Main application component
+                                    </div>
+                                    <div class="file-item">
+                                        <span class="file-icon">🏠</span>
+                                        <code>index.js</code> - Application entry point
+                                    </div>
+                                    <div class="file-item">
+                                        <span class="file-icon">🎨</span>
+                                        <code>App.css</code> - Component styles
+                                    </div>
+                                    <div class="file-item">
+                                        <span class="file-icon">🖼️</span>
+                                        <code>logo.svg</code> - React logo
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="structure-item">
+                                <span class="folder-icon">🌐</span>
+                                <strong>public/</strong>
+                                <p>Static assets and HTML template</p>
+                                <div class="sub-files">
+                                    <div class="file-item">
+                                        <span class="file-icon">📄</span>
+                                        <code>index.html</code> - Main HTML file
+                                    </div>
+                                    <div class="file-item">
+                                        <span class="file-icon">🎯</span>
+                                        <code>favicon.ico</code> - Browser tab icon
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="structure-item">
+                                <span class="file-icon">📋</span>
+                                <strong>package.json</strong>
+                                <p>Project configuration and dependencies</p>
+                            </div>
+
+                            <div class="structure-item">
+                                <span class="file-icon">🔒</span>
+                                <strong>package-lock.json</strong>
+                                <p>Exact dependency versions (auto-generated)</p>
+                            </div>
+
+                            <div class="structure-item">
+                                <span class="file-icon">📖</span>
+                                <strong>README.md</strong>
+                                <p>Project documentation</p>
+                            </div>
+                        </div>
+
+                        <div class="important-files">
+                            <h4>Key Files to Remember:</h4>
+                            <ul>
+                                <li><code>src/App.js</code> - Your main component</li>
+                                <li><code>src/index.js</code> - App startup</li>
+                                <li><code>public/index.html</code> - HTML template</li>
+                                <li><code>package.json</code> - Project config</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in delay-1" style="border-left: 4px solid #74c0fc;">
+                    <div class="step-header" style="background: var(--gradient-3);">
+                        <span class="step-number">5</span>
+                        <h2>Your First Code Changes</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>Let's make our first modification to the React app to see how changes work.</p>
+
+                        <h3>Step 5.1: Open the Project in VS Code</h3>
+                        <div class="code-block">
+                            <h4>In your terminal, from the project directory:</h4>
+                            <pre><code>code .</code></pre>
+                        </div>
+                        <p>This opens the current directory in VS Code.</p>
+
+                        <h3>Step 5.2: Edit App.js</h3>
+                        <p>Open <code>src/App.js</code> in VS Code and replace the content with:</p>
+                        <div class="code-block">
+                            <h4>src/App.js</h4>
+                            <pre><code>function App() {
+  return (
+    &lt;div className="App"&gt;
+      &lt;header className="App-header"&gt;
+        &lt;h1&gt;Hello, React World!&lt;/h1&gt;
+        &lt;p&gt;My first React application&lt;/p&gt;
+        &lt;button onClick={() =&gt; alert('Hello!')}&gt;
+          Click me!
+        &lt;/button&gt;
+      &lt;/header&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;</code></pre>
+                        </div>
+
+                        <h3>Step 5.3: Save and See Changes</h3>
+                        <p>Save the file (Ctrl+S or Cmd+S). The browser should automatically refresh and show your changes!</p>
+
+                        <div class="tip-box" style="background: var(--gradient-3);">
+                            <h4>🔄 Hot Module Replacement</h4>
+                            <p>Create React App includes Hot Module Replacement (HMR), which automatically updates your app in the browser when you save changes to your code.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in delay-2" style="border-left: 4px solid #9775fa;">
+                    <div class="step-header" style="background: var(--gradient-1);">
+                        <span class="step-number">6</span>
+                        <h2>Essential npm Commands</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>Learn the most important npm commands you'll use regularly in React development.</p>
+
+                        <div class="commands-grid">
+                            <div class="command-item">
+                                <h4>npm start</h4>
+                                <p>Starts the development server</p>
+                                <code>npm start</code>
+                            </div>
+                            <div class="command-item">
+                                <h4>npm run build</h4>
+                                <p>Creates production build</p>
+                                <code>npm run build</code>
+                            </div>
+                            <div class="command-item">
+                                <h4>npm test</h4>
+                                <p>Runs test suite</p>
+                                <code>npm test</code>
+                            </div>
+                            <div class="command-item">
+                                <h4>npm install</h4>
+                                <p>Installs dependencies</p>
+                                <code>npm install package-name</code>
+                            </div>
+                            <div class="command-item">
+                                <h4>npm run eject</h4>
+                                <p>Ejects from CRA (irreversible)</p>
+                                <code>npm run eject</code>
+                            </div>
+                            <div class="command-item">
+                                <h4>npm run deploy</h4>
+                                <p>Deploy to GitHub Pages</p>
+                                <code>npm run deploy</code>
+                            </div>
+                        </div>
+
+                        <div class="warning-box" style="background: var(--gradient-2);">
+                            <h4>⚠️ Important Warning</h4>
+                            <p><code>npm run eject</code> is irreversible. Only use it if you need full control over build configuration. Most projects never need to eject.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>Alternatively, use the status bar indicators at the bottom of VS Code for quick push/pull operations.</p>
-        </div>
-        <div class="card">
-            <h2>VS Code Git Features</h2>
-            <ul>
-                <li><strong>Diff View:</strong> See changes side-by-side</li>
-                <li><strong>Branch Management:</strong> Create and switch branches easily</li>
-                <li><strong>Merge Conflicts:</strong> Resolve conflicts with built-in tools</li>
-                <li><strong>Git History:</strong> View commit timeline and blame information</li>
-            </ul>
-        </div>
-        <div class="card">
-            <div class="highlight">
-                <h3>💡 Pro Tip</h3>
-                <p>Use keyboard shortcuts in VS Code for faster Git operations:</p>
-                <ul style="margin: 10px 0;">
-                    <li><code>Ctrl+Shift+G</code> - Open Source Control</li>
-                    <li><code>Ctrl+Enter</code> - Commit with message</li>
-                    <li><code>Ctrl+Shift+P</code> - Command Palette for Git commands</li>
-                </ul>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card animate-pulse">
+                    <h3>Ready to Build Components?</h3>
+                    <p>Now that you have your environment set up, let's dive into React components!</p>
+                    <a href="2.html" class="cta-button">Next: Components →</a>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 React Developer Guide. Built with ❤️ for beginners.</p>
         </div>
-    </div>
+    </footer>
+
+    <script src="animations.js"></script>
 </body>
 </html>

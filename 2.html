@@ -3,169 +3,661 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Features - Git and GitHub Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #24292e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #fff;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #0366d6;
-            font-weight: 500;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin: 20px 0;
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-        }
-        .card h2 {
-            color: #24292e;
-            margin-top: 0;
-        }
-        .card p, .card ul {
-            line-height: 1.6;
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .highlight {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-    </style>
+    <title>Components - React Developer Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>GitHub Features</h1>
-        <p>Powerful collaboration and project management tools</p>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="1.html">Git Basics</a>
-        <a href="2.html">GitHub Features</a>
-        <a href="3.html">Advanced Git</a>
+    <nav class="main-nav animate-slide-down">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="1.html" class="nav-link">Setup & Basics</a>
+            <a href="2.html" class="nav-link active">Components</a>
+            <a href="3.html" class="nav-link">Advanced Topics</a>
+        </div>
     </nav>
-    <div class="container">
-        <div class="card">
-            <h2>What is GitHub?</h2>
-            <p>GitHub is a web-based platform that uses Git for version control and adds collaboration features. It provides a graphical interface for managing Git repositories and offers tools for code review, project management, and team collaboration.</p>
-        </div>
-        <div class="feature-grid">
-            <div class="card">
-                <h2>Repositories</h2>
-                <p>Host your Git repositories on GitHub with features like issue tracking, wikis, and release management. Public repositories are free, while private repositories offer enhanced security.</p>
+
+    <main class="main-content">
+        <section class="hero-section page-hero">
+            <div class="hero-content">
+                <h1 class="animate-fade-in">🧩 React Components</h1>
+                <p class="animate-slide-up">Building reusable UI building blocks</p>
             </div>
-            <div class="card">
-                <h2>Pull Requests</h2>
-                <p>Propose changes to a repository and discuss them with collaborators. Pull requests enable code review, automated testing, and merge conflict resolution.</p>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="step-card animate-scale-in" style="border-left: 4px solid #61dafb;">
+                    <div class="step-header" style="background: var(--gradient-1);">
+                        <span class="step-number">1</span>
+                        <h2>Understanding React Components</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>Components are the heart of React applications. They are independent, reusable pieces of code that return JSX to describe what should appear on the screen.</p>
+
+                        <h3>What Makes a Component?</h3>
+                        <div class="component-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🔄</span>
+                                <div>
+                                    <strong>Reusable:</strong> Write once, use everywhere
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🧩</span>
+                                <div>
+                                    <strong>Composable:</strong> Build complex UIs from simple pieces
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🔧</span>
+                                <div>
+                                    <strong>Maintainable:</strong> Easy to update and debug
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">⚡</span>
+                                <div>
+                                    <strong>Performant:</strong> React optimizes rendering automatically
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box" style="background: var(--gradient-1);">
+                            <h4>💡 Component Philosophy</h4>
+                            <p>Think of components like LEGO blocks. Each block has a specific purpose and can be combined with others to build amazing structures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in delay-1" style="border-left: 4px solid #ff6b6b;">
+                    <div class="step-header" style="background: var(--gradient-2);">
+                        <span class="step-number">2</span>
+                        <h2>Function Components vs Class Components</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>React supports two types of components. Modern React development primarily uses function components with hooks.</p>
+
+                        <h3>Function Components (Recommended)</h3>
+                        <div class="code-block">
+                            <h4>Modern Function Component</h4>
+                            <pre><code>import React from 'react';
+
+function Welcome(props) {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;
+      &lt;p&gt;Welcome to React&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Welcome;</code></pre>
+                        </div>
+
+                        <h3>Class Components (Legacy)</h3>
+                        <div class="code-block">
+                            <h4>Class Component Example</h4>
+                            <pre><code>import React, { Component } from 'react';
+
+class Welcome extends Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Hello, {this.props.name}!&lt;/h1&gt;
+        &lt;p&gt;Welcome to React&lt;/p&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default Welcome;</code></pre>
+                        </div>
+
+                        <div class="comparison-table">
+                            <div class="comparison-header">
+                                <span>Function Components</span>
+                                <span>Class Components</span>
+                            </div>
+                            <div class="comparison-row">
+                                <span>✅ Modern, preferred approach</span>
+                                <span>⚠️ Legacy, being phased out</span>
+                            </div>
+                            <div class="comparison-row">
+                                <span>✅ Use hooks for state & effects</span>
+                                <span>✅ Use lifecycle methods</span>
+                            </div>
+                            <div class="comparison-row">
+                                <span>✅ Less code, easier to read</span>
+                                <span>❌ More boilerplate code</span>
+                            </div>
+                            <div class="comparison-row">
+                                <span>✅ Better performance</span>
+                                <span>❌ Slightly slower</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in delay-2" style="border-left: 4px solid #51cf66;">
+                    <div class="step-header" style="background: var(--gradient-4);">
+                        <span class="step-number">3</span>
+                        <h2>JSX: The Language of React</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>JSX is a syntax extension that allows you to write HTML-like code in JavaScript. It's not required but makes React code much more readable.</p>
+
+                        <h3>JSX Basics</h3>
+                        <div class="jsx-examples-grid">
+                            <div class="jsx-example">
+                                <h4>Basic JSX</h4>
+                                <pre><code>const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</code></pre>
+                                <p>Simple JSX element</p>
+                            </div>
+                            <div class="jsx-example">
+                                <h4>Embedding Expressions</h4>
+                                <pre><code>const name = "React";
+const element = &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;</code></pre>
+                                <p>Use curly braces for JavaScript expressions</p>
+                            </div>
+                            <div class="jsx-example">
+                                <h4>Attributes</h4>
+                                <pre><code>const element = &lt;img src={user.avatarUrl} /&gt;;</code></pre>
+                                <p>Dynamic attributes with expressions</p>
+                            </div>
+                            <div class="jsx-example">
+                                <h4>Children</h4>
+                                <pre><code>const element = (
+  &lt;div&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;p&gt;Content&lt;/p&gt;
+  &lt;/div&gt;
+);</code></pre>
+                                <p>JSX elements can have children</p>
+                            </div>
+                        </div>
+
+                        <h3>JSX Rules & Best Practices</h3>
+                        <div class="jsx-rules">
+                            <div class="rule-item">
+                                <span class="rule-number">1</span>
+                                <div>
+                                    <strong>Always close tags:</strong> Use self-closing tags for elements without children
+                                </div>
+                            </div>
+                            <div class="rule-item">
+                                <span class="rule-number">2</span>
+                                <div>
+                                    <strong>One parent element:</strong> JSX expressions must have one parent element
+                                </div>
+                            </div>
+                            <div class="rule-item">
+                                <span class="rule-number">3</span>
+                                <div>
+                                    <strong>className not class:</strong> Use className instead of class for CSS classes
+                                </div>
+                            </div>
+                            <div class="rule-item">
+                                <span class="rule-number">4</span>
+                                <div>
+                                    <strong>htmlFor not for:</strong> Use htmlFor instead of for for label elements
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in" style="border-left: 4px solid #ffd43b;">
+                    <div class="step-header" style="background: var(--gradient-5);">
+                        <span class="step-number">4</span>
+                        <h2>Props: Passing Data to Components</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>Props (properties) are how you pass data from parent components to child components. They are read-only and help make components reusable.</p>
+
+                        <h3>Basic Props Usage</h3>
+                        <div class="code-block">
+                            <h4>Component with Props</h4>
+                            <pre><code>function Greeting(props) {
+  return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
+}
+
+// Usage in parent component
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;Greeting name="Alice" /&gt;
+      &lt;Greeting name="Bob" /&gt;
+      &lt;Greeting name="Charlie" /&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+                        </div>
+
+                        <h3>Destructuring Props</h3>
+                        <div class="code-block">
+                            <h4>Cleaner Props with Destructuring</h4>
+                            <pre><code>// Instead of: function User(props) { return &lt;div&gt;{props.name}&lt;/div&gt;; }
+
+// Use destructuring:
+function User({ name, age, email }) {
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;{name}&lt;/h2&gt;
+      &lt;p&gt;Age: {age}&lt;/p&gt;
+      &lt;p&gt;Email: {email}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+// Usage:
+&lt;User name="John" age={25} email="john@example.com" /&gt;</code></pre>
+                        </div>
+
+                        <h3>Default Props</h3>
+                        <div class="code-block">
+                            <h4>Setting Default Values</h4>
+                            <pre><code>function Button({ text, color = "blue" }) {
+  return &lt;button style={{ backgroundColor: color }}&gt;{text}&lt;/button&gt;;
+}
+
+// These are equivalent:
+&lt;Button text="Click me" /&gt;  // color = "blue"
+&lt;Button text="Click me" color="red" /&gt;  // color = "red"</code></pre>
+                        </div>
+
+                        <div class="props-types">
+                            <h4>Common Prop Types</h4>
+                            <ul>
+                                <li><code>string</code> - Text content</li>
+                                <li><code>number</code> - Numeric values</li>
+                                <li><code>boolean</code> - True/false values</li>
+                                <li><code>function</code> - Event handlers</li>
+                                <li><code>object</code> - Complex data</li>
+                                <li><code>array</code> - Lists of data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in delay-1" style="border-left: 4px solid #74c0fc;">
+                    <div class="step-header" style="background: var(--gradient-3);">
+                        <span class="step-number">5</span>
+                        <h2>State Management with useState</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>State allows components to manage their own data that can change over time. The useState hook is the primary way to add state to function components.</p>
+
+                        <h3>Basic useState Usage</h3>
+                        <div class="code-block">
+                            <h4>Counter Component</h4>
+                            <pre><code>import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Current count: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Increment
+      &lt;/button&gt;
+      &lt;button onClick={() =&gt; setCount(count - 1)}&gt;
+        Decrement
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+                        </div>
+
+                        <h3>State with Different Data Types</h3>
+                        <div class="state-examples">
+                            <div class="state-example">
+                                <h4>String State</h4>
+                                <pre><code>const [name, setName] = useState("John");</code></pre>
+                            </div>
+                            <div class="state-example">
+                                <h4>Number State</h4>
+                                <pre><code>const [age, setAge] = useState(25);</code></pre>
+                            </div>
+                            <div class="state-example">
+                                <h4>Boolean State</h4>
+                                <pre><code>const [isVisible, setIsVisible] = useState(true);</code></pre>
+                            </div>
+                            <div class="state-example">
+                                <h4>Object State</h4>
+                                <pre><code>const [user, setUser] = useState({ name: "John", age: 25 });</code></pre>
+                            </div>
+                            <div class="state-example">
+                                <h4>Array State</h4>
+                                <pre><code>const [items, setItems] = useState(["item1", "item2"]);</code></pre>
+                            </div>
+                        </div>
+
+                        <h3>Updating Object/Array State</h3>
+                        <div class="code-block">
+                            <h4>Updating Objects</h4>
+                            <pre><code>const [user, setUser] = useState({ name: "John", age: 25 });
+
+// ❌ Wrong way (mutates state directly)
+setUser({ name: "Jane" }); // Loses age property
+
+// ✅ Correct way (uses spread operator)
+setUser({ ...user, name: "Jane" }); // Preserves age
+
+// Or use functional update
+setUser(prevUser =&gt; ({ ...prevUser, name: "Jane" }));</code></pre>
+                        </div>
+
+                        <div class="state-rules">
+                            <h4>State Update Rules</h4>
+                            <ul>
+                                <li>✅ State updates are asynchronous</li>
+                                <li>✅ Never modify state directly</li>
+                                <li>✅ Use functional updates for previous state</li>
+                                <li>✅ State can trigger re-renders</li>
+                                <li>✅ Multiple setState calls may batch together</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in delay-2" style="border-left: 4px solid #9775fa;">
+                    <div class="step-header" style="background: var(--gradient-1);">
+                        <span class="step-number">6</span>
+                        <h2>Event Handling in React</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>React provides a consistent way to handle events across different browsers. Event handlers are functions that get called when specific events occur.</p>
+
+                        <h3>Basic Event Handling</h3>
+                        <div class="code-block">
+                            <h4>Click Event Example</h4>
+                            <pre><code>function Button() {
+  function handleClick() {
+    alert('Button was clicked!');
+  }
+
+  return (
+    &lt;button onClick={handleClick}&gt;
+      Click me
+    &lt;/button&gt;
+  );
+}</code></pre>
+                        </div>
+
+                        <h3>Event Object</h3>
+                        <div class="code-block">
+                            <h4>Accessing Event Information</h4>
+                            <pre><code>function handleSubmit(event) {
+  event.preventDefault(); // Prevents page reload
+  console.log('Form submitted');
+}
+
+function handleChange(event) {
+  console.log('Input value:', event.target.value);
+}</code></pre>
+                        </div>
+
+                        <h3>Common Event Types</h3>
+                        <div class="event-types">
+                            <div class="event-type">
+                                <code>onClick</code>
+                                <span>Fires when element is clicked</span>
+                            </div>
+                            <div class="event-type">
+                                <code>onChange</code>
+                                <span>Fires when input value changes</span>
+                            </div>
+                            <div class="event-type">
+                                <code>onSubmit</code>
+                                <span>Fires when form is submitted</span>
+                            </div>
+                            <div class="event-type">
+                                <code>onMouseEnter</code>
+                                <span>Fires when mouse enters element</span>
+                            </div>
+                            <div class="event-type">
+                                <code>onMouseLeave</code>
+                                <span>Fires when mouse leaves element</span>
+                            </div>
+                            <div class="event-type">
+                                <code>onFocus</code>
+                                <span>Fires when element gains focus</span>
+                            </div>
+                            <div class="event-type">
+                                <code>onBlur</code>
+                                <span>Fires when element loses focus</span>
+                            </div>
+                        </div>
+
+                        <h3>Passing Arguments to Event Handlers</h3>
+                        <div class="code-block">
+                            <h4>Event Handlers with Parameters</h4>
+                            <pre><code>function handleDelete(id) {
+  console.log('Deleting item:', id);
+}
+
+function ItemList() {
+  const items = [1, 2, 3];
+
+  return (
+    &lt;ul&gt;
+      {items.map(item =&gt; (
+        &lt;li key={item}&gt;
+          Item {item}
+          &lt;button onClick={() =&gt; handleDelete(item)}&gt;
+            Delete
+          &lt;/button&gt;
+        &lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in" style="border-left: 4px solid #ff6b6b;">
+                    <div class="step-header" style="background: var(--gradient-2);">
+                        <span class="step-number">7</span>
+                        <h2>Conditional Rendering</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>Conditional rendering allows you to show different content based on certain conditions. React supports several patterns for conditional rendering.</p>
+
+                        <h3>If/Else Statements</h3>
+                        <div class="code-block">
+                            <h4>Using if/else</h4>
+                            <pre><code>function Greeting(props) {
+  if (props.isLoggedIn) {
+    return &lt;h1&gt;Welcome back!&lt;/h1&gt;;
+  } else {
+    return &lt;h1&gt;Please sign in.&lt;/h1&gt;;
+  }
+}</code></pre>
+                        </div>
+
+                        <h3>Ternary Operator</h3>
+                        <div class="code-block">
+                            <h4>Inline Conditional Rendering</h4>
+                            <pre><code>function Greeting(props) {
+  return (
+    &lt;div&gt;
+      {props.isLoggedIn ? (
+        &lt;h1&gt;Welcome back!&lt;/h1&gt;
+      ) : (
+        &lt;h1&gt;Please sign in.&lt;/h1&gt;
+      )}
+    &lt;/div&gt;
+  );
+}</code></pre>
+                        </div>
+
+                        <h3>Logical && Operator</h3>
+                        <div class="code-block">
+                            <h4>Rendering with &&</h4>
+                            <pre><code>function Mailbox(props) {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Hello!&lt;/h1&gt;
+      {props.unreadMessages.length &gt; 0 && (
+        &lt;p&gt;
+          You have {props.unreadMessages.length} unread messages.
+        &lt;/p&gt;
+      )}
+    &lt;/div&gt;
+  );
+}</code></pre>
+                        </div>
+
+                        <h3>Preventing Component Rendering</h3>
+                        <div class="code-block">
+                            <h4>Returning null</h4>
+                            <pre><code>function WarningBanner(props) {
+  if (!props.warn) {
+    return null; // Nothing renders
+  }
+
+  return (
+    &lt;div className="warning"&gt;
+      Warning!
+    &lt;/div&gt;
+  );
+}</code></pre>
+                        </div>
+
+                        <div class="conditional-tips">
+                            <h4>Conditional Rendering Tips</h4>
+                            <ul>
+                                <li>Use ternary operators for simple conditions</li>
+                                <li>Use && for "if exists" scenarios</li>
+                                <li>Return null to hide components completely</li>
+                                <li>Extract complex conditions to variables for readability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card animate-scale-in delay-1" style="border-left: 4px solid #51cf66;">
+                    <div class="step-header" style="background: var(--gradient-4);">
+                        <span class="step-number">8</span>
+                        <h2>Lists and Keys</h2>
+                    </div>
+                    <div class="step-content">
+                        <p>Rendering lists of data is a common pattern in React. Keys help React identify which items have changed, are added, or removed.</p>
+
+                        <h3>Basic List Rendering</h3>
+                        <div class="code-block">
+                            <h4>Rendering an Array of Items</h4>
+                            <pre><code>function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =&gt;
+    &lt;li key={number.toString()}&gt;
+      {number}
+    &lt;/li&gt;
+  );
+
+  return &lt;ul&gt;{listItems}&lt;/ul&gt;;
+}
+
+// Usage:
+const numbers = [1, 2, 3, 4, 5];
+&lt;NumberList numbers={numbers} /&gt;</code></pre>
+                        </div>
+
+                        <h3>Why Keys Are Important</h3>
+                        <div class="keys-explanation">
+                            <div class="key-benefit">
+                                <span class="key-icon">🔑</span>
+                                <div>
+                                    <strong>Identification:</strong> Keys help React identify which items have changed
+                                </div>
+                            </div>
+                            <div class="key-benefit">
+                                <span class="key-icon">⚡</span>
+                                <div>
+                                    <strong>Performance:</strong> Keys enable efficient re-rendering of lists
+                                </div>
+                            </div>
+                            <div class="key-benefit">
+                                <span class="key-icon">🎯</span>
+                                <div>
+                                    <strong>Stability:</strong> Keys maintain component state during reorders
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Choosing the Right Key</h3>
+                        <div class="key-examples">
+                            <div class="key-example good">
+                                <h4>✅ Good Keys</h4>
+                                <ul>
+                                    <li><code>key={item.id}</code> - Unique database ID</li>
+                                    <li><code>key={item.uuid}</code> - Universally unique identifier</li>
+                                    <li><code>key={index}</code> - Last resort for static lists</li>
+                                </ul>
+                            </div>
+                            <div class="key-example bad">
+                                <h4>❌ Bad Keys</h4>
+                                <ul>
+                                    <li><code>key={Math.random()}</code> - Changes every render</li>
+                                    <li><code>key={new Date()}</code> - Not stable</li>
+                                    <li>No key at all - React warning</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h3>Keys in Practice</h3>
+                        <div class="code-block">
+                            <h4>Todo List with Keys</h4>
+                            <pre><code>function TodoList({ todos }) {
+  return (
+    &lt;ul&gt;
+      {todos.map((todo) =&gt; (
+        &lt;li key={todo.id}&gt;
+          {todo.text}
+        &lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}
+
+const todos = [
+  { id: 1, text: 'Learn React' },
+  { id: 2, text: 'Build an app' },
+  { id: 3, text: 'Deploy to production' }
+];</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h2>Issues</h2>
-                <p>Track bugs, feature requests, and tasks. Use labels, assignees, and milestones to organize and prioritize work effectively.</p>
+        </section>
+                                <code>useEffect(() => { return () => { /* cleanup */ } }, [])</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h2>GitHub Actions</h2>
-                <p>Automate your workflow with CI/CD pipelines. Build, test, and deploy your code automatically when you push changes.</p>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card animate-pulse">
+                    <h3>Ready for Advanced Topics?</h3>
+                    <p>Now that you understand components, let's explore advanced React concepts!</p>
+                    <a href="3.html" class="cta-button">Next: Advanced Topics →</a>
+                </div>
             </div>
-            <div class="card">
-                <h2>GitHub Pages</h2>
-                <p>Host static websites directly from your GitHub repositories. Perfect for project documentation, portfolios, and simple web applications.</p>
-            </div>
-            <div class="card">
-                <h2>Organizations</h2>
-                <p>Manage multiple repositories and users under one organization. Control access, set up teams, and maintain coding standards across projects.</p>
-            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 React Developer Guide. Built with ❤️ for beginners.</p>
         </div>
-        <div class="card">
-            <h2>Collaboration Tools</h2>
-            <p>GitHub provides various tools to enhance collaboration, including code review comments, project boards, and integration with popular development tools and services.</p>
-        </div>
-        <div class="card">
-            <h2>Connecting Git to GitHub</h2>
-            <p>To connect your local Git repository to GitHub, you need to add a remote origin. This allows you to push your local commits to GitHub and pull changes from collaborators.</p>
-        </div>
-        <div class="card">
-            <h2>Authentication Methods</h2>
-            <ul>
-                <li><strong>Personal Access Tokens:</strong> Recommended for command line and VS Code</li>
-                <li><strong>SSH Keys:</strong> More secure for frequent operations</li>
-                <li><strong>GitHub CLI:</strong> Authenticate through command line interface</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Setting Up Remote Origin</h2>
-            <div class="code">
-# Add GitHub repository as remote origin<br>
-git remote add origin https://github.com/username/repo-name.git<br><br>
-# Verify remote<br>
-git remote -v<br><br>
-# Push local commits to GitHub<br>
-git push -u origin main
-            </div>
-        </div>
-        <div class="card">
-            <h2>VS Code GitHub Integration</h2>
-            <p>VS Code has built-in GitHub integration. Sign in to GitHub from VS Code to enable features like:</p>
-            <ul>
-                <li>Publishing repositories directly to GitHub</li>
-                <li>Creating pull requests from VS Code</li>
-                <li>Managing issues and comments</li>
-                <li>Collaborating with team members</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h2>Publishing to GitHub from VS Code</h2>
-            <ol>
-                <li>Open Source Control panel</li>
-                <li>Click "Publish to GitHub"</li>
-                <li>Choose public or private repository</li>
-                <li>Sign in to GitHub if prompted</li>
-                <li>Repository is created and pushed automatically</li>
-            </ol>
-        </div>
-        <div class="card">
-            <div class="highlight">
-                <h3>🔐 Security Best Practice</h3>
-                <p>Always use Personal Access Tokens instead of passwords for GitHub authentication. Generate tokens from GitHub Settings > Developer settings > Personal access tokens.</p>
-            </div>
-        </div>
-    </div>
+    </footer>
+
+    <script src="animations.js"></script>
 </body>
 </html>
